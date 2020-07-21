@@ -4,12 +4,13 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "dev": "nodemon server.js",
+        "dev": "nodemon src/server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "lint-staged": {
         "*.js": [
-            "standard"
+            "standard --fix",
+            "git add"
         ]
     },
     "husky": {
@@ -21,11 +22,16 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "express": "^4.17.1"
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mongoose": "^5.9.25"
     },
     "devDependencies": {
         "husky": "^4.2.5",
         "lint-staged": "^10.2.11",
+        "morgan": "^1.10.0",
         "standard": "^14.3.4"
     }
 }
