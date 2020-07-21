@@ -12,6 +12,11 @@
             "standard"
         ]
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
@@ -19,6 +24,7 @@
         "express": "^4.17.1"
     },
     "devDependencies": {
+        "husky": "^4.2.5",
         "lint-staged": "^10.2.11",
         "standard": "^14.3.4"
     }
