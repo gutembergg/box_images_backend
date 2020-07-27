@@ -5,6 +5,7 @@ mongoose.connect('mongodb://localhost/boximages', {
   useUnifiedTopology: true,
   useCreateIndex: true
 })
+mongoose.set('useFindAndModify', false)
 
 mongoose.Promise = global.Promise
 
