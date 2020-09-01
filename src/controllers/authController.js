@@ -70,8 +70,6 @@ router.post('/forgot_password', async (req, res) => {
 
     const token = crypto.randomBytes(20).toString('hex')
 
-    console.log(token)
-
     await User.findByIdAndUpdate(user._id, {
       $set: { resetPasswordToken: token }
     })
